@@ -1,0 +1,108 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp9
+{
+    class bank
+
+    {
+
+        public float balAmt;
+        public float amount;
+
+        public bank()
+        {
+            balAmt = 5000;
+        }
+####class
+        public void checkBalance()
+        {
+            Console.WriteLine("balance" + balAmt);
+        }
+
+        public void deposit()
+        {
+
+            Console.WriteLine("enter the amount for deposit");
+            amount = float.Parse(Console.ReadLine());
+            balAmt = balAmt + amount;
+
+        }
+
+        public void withdrawal()
+        {
+            float minbal;
+                Console.WriteLine("enter the amount for withdrawal");
+                amount = float.Parse(Console.ReadLine());
+                minbal = balAmt - 5000;
+            if (amount <= minbal)
+            {
+                balAmt -= amount;
+            }
+            else if (amount > minbal)
+            {
+
+                Console.WriteLine("insuffcient amount");
+            }
+            
+
+
+        }
+          
+        
+    }
+}
+
+
+
+####program
+using System;
+
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            bank b = new bank();
+            Console.WriteLine("Enter the Account Number");
+            int ch;
+            do
+            {
+
+
+                Console.WriteLine("Enter your choice\n 1.Balance\n2.Deposit\n 3.withdrawal\n 4.Exit\n");
+                ch = int.Parse(Console.ReadLine());
+
+                switch (ch)
+                {
+
+
+
+                    case 1:
+                        b.checkBalance();
+                        break;
+                    case 2:
+                        b.deposit();
+                        break;
+                    case 3:
+
+                        b.withdrawal();
+                        break;
+                    case 4:
+                        System.Environment.Exit(0);
+                        break;
+                }
+            } while (ch != 0);
+
+            Console.ReadKey();
+
+        }
+      
+        
+    }
+    
+}
+
