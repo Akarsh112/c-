@@ -1,0 +1,147 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp10
+{
+        class Student
+        {
+            private string stu_course;
+            private string stu_name;
+            private int stu_id;
+            private int lab1_mark, lab2_mark, lab3_mark;
+
+            public string Stu_Course
+            {
+                get
+                {
+                    return stu_course;
+                }
+                set
+                {
+                    stu_course = value;
+                }
+            }
+            public string Stu_Name
+            {
+                get
+                {
+                    return stu_name;
+                }
+                set
+                {
+                    stu_name = value;
+                }
+            }
+            public int Stu_id
+        {
+            get
+            {
+                return stu_id;
+            }
+            set
+            {
+                stu_id = value;
+            }
+        }
+
+        public int Lab1_marks
+        {
+            get
+            {
+                return lab1_mark;
+            }
+            set
+            {
+                lab1_mark = value;
+
+            }
+        }
+
+        public int Lab2_marks
+        {
+            get
+            {
+                return lab2_mark;
+            }
+            set
+            {
+                lab2_mark = value;
+
+            }
+        }
+
+        public int Lab3_marks
+        {
+            get
+            {
+                return lab3_mark;
+            }
+            set
+            {
+                lab3_mark = value;
+
+            }
+        }
+
+
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    using System;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Student s1 = new Student();
+            Console.WriteLine("enter student name");
+            s1.Stu_Name = Console.ReadLine();
+            Console.WriteLine("enter student id");
+            s1.Stu_id = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter student course");
+            s1.Stu_Course = Console.ReadLine();
+            Console.WriteLine("enter the marks of 1St lab");
+            s1.Lab1_marks = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter the marks of 2nd lab");
+            s1.Lab2_marks = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter the marks of 3St lab");
+            s1.Lab3_marks = int.Parse(Console.ReadLine());
+
+            if (s1.Lab1_marks > s1.Lab2_marks&&s1.Lab2_marks>s1.Lab3_marks)
+            {
+              
+            }
+
+            else if(s1.Lab2_marks>s1.Lab1_marks&&s1.Lab2_marks>s1.Lab3_marks)
+            {
+                Console.WriteLine("the best of two among three are=" + s1.Lab1_marks + "and"+s1.Lab2_marks);
+            }
+            else
+            {
+                Console.WriteLine("the best of two among three are=" + s1.Lab1_marks + "and"+s1.Lab2_marks);
+            }
+            
+
+
+            Console.WriteLine("student name:" + s1.Stu_Name);
+            Console.WriteLine("student id:" + s1.Stu_id);
+            Console.WriteLine("student cousre:" + s1.Stu_Course);
+
+            Console.ReadKey();
+        }
+    }
+}
+
